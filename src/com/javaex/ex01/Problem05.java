@@ -4,25 +4,31 @@ public class Problem05 {
 
 	public static void main(String[] args) {
 
-		int[] num = new int[6];
+		int[] num = new int[100];
 
 		for (int i = 0; i < num.length; i++) {
 
-			num[i] = (int) (Math.random() * 45) + 1;
-
-			for (int j = 1; j < num.length; j++) {
-
-				if (num[j] != num[i]) {
-
+			for(int j = 0; j < num.length; j++ ) {
+				
+				if(j == i) {
 					continue;
-
-				} else {
-
 				}
-
+				
+				num[i] = (int) (Math.random() * 100) + 1;
+				
+				
+				if(num[j] == num[i]) {
+					j = j-1;
+					continue;
+				}	
+				
 			}
-
-			System.out.print(num[i] + "\t");
+          for(int x = 0; x < 101; x++) {
+			
+        	  
+        	  
+        	  System.out.print(num[i]);
+          }
 
 		}
 
